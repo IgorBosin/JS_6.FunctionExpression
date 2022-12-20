@@ -34,3 +34,34 @@
 // }
 // // использование: функции showOk, showCancel передаются в качестве аргументов ask
 // ask("Вы согласны?", showOk, showCancel);
+
+// ------------------------------------  
+// Глобальная видимость functionDeclaration с использ.строгого режима 
+// 'use strict'
+// let age = 18;
+// if (age < 18) {
+//   function welcome() {
+//     alert("Привет!");
+//   }
+// } else {
+//   function welcome() {
+//     alert("Здравствуйте!");
+//   }
+// }
+// welcome(); // Error: welcome is not defined
+// ------------------------------------  
+
+// Глобальная видимость functionExpression с использ.строгого режима 
+// 'use strict'
+// let age = 18;
+// let welcome;
+// if (age < 18) {
+//   welcome = function() {
+//     alert("Привет!");
+//   };
+// } else {
+//   welcome = function() {
+//     alert("Здравствуйте!");
+//   };
+// }
+// welcome(); // Здравствуйте!
